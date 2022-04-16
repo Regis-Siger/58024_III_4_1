@@ -99,7 +99,7 @@ namespace _58024_III_4_1
                     dictionary.Add(first + second[0]);
                     _code.RemoveAt(0);
                 }
-                catch (ArgumentOutOfRangeException ex)
+                catch (ArgumentOutOfRangeException)
                 {
                     string first = dictionary[int.Parse(_code[0]) - 1];
                     decompressed.Add(first);
@@ -192,7 +192,6 @@ namespace _58024_III_4_1
             {
                 Console.WriteLine("Please enter the string you want to compress: \n");
                 toBeCompressed = Console.ReadLine();
-
             } while (toBeCompressed == "");
 
             SourceCode source = new SourceCode(toBeCompressed);
